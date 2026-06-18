@@ -104,3 +104,153 @@ a {
   border-color: var(--accent);
   color: var(--accent-dark);
 }
+
+.demo-page {
+  width: min(1120px, calc(100% - 32px));
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.panel {
+  min-width: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.message-bubble {
+  margin-bottom: 20px;
+  border: 1px solid #cfe4e1;
+  border-radius: 8px;
+  background: #eef9f7;
+  color: var(--ink);
+  padding: 14px;
+  font-size: 0.96rem;
+}
+
+.meta-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.meta-list div {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.meta-list dt,
+label,
+legend,
+.account-card strong {
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.meta-list dd {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+  margin: 7px 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 11px 12px;
+  color: var(--ink);
+  font: inherit;
+  resize: vertical;
+}
+
+fieldset {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.check-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.step-list {
+  margin: 0 0 18px;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.step-list li {
+  margin-bottom: 9px;
+}
+
+.account-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.account-card p {
+  margin: 2px 0 0;
+  font-size: 0.92rem;
+}
+
+.status-dot {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: #1d9a69;
+}
+
+.primary-action {
+  width: 100%;
+  min-height: 46px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.primary-action:hover,
+.primary-action:focus {
+  background: var(--accent-dark);
+}
+
+.primary-action:disabled {
+  cursor: default;
+  background: #7a8986;
+}
+
+.publish-status {
+  margin: 12px 0 0;
+  font-size: 0.94rem;
+}
+
+@media (max-width: 900px) {
+  .workflow {
+    grid-template-columns: 1fr;
+  }
+}

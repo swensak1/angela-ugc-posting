@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workflow Demo | Angela UGC Posting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page demo-page">
+    <section class="hero">
+      <p class="eyebrow">Review demo</p>
+      <h1>Angela UGC Posting Workflow</h1>
+      <p>
+        This private workflow receives Angela's approved video link and request,
+        prepares platform captions, and publishes to the TikTok account Angela
+        connects and authorizes.
+      </p>
+    </section>
+
+    <section class="workflow" aria-label="Posting workflow demo">
+      <div class="panel intake">
+        <p class="eyebrow">Telegram intake</p>
+        <div class="message-bubble">
+          Please make some captions for this and post this to all my socials.
+          Video link: https://example.com/shared-video
+        </div>
+        <dl class="meta-list">
+          <div>
+            <dt>Source</dt>
+            <dd>Angela via Telegram</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Waiting for final review</dd>
+          </div>
+          <div>
+            <dt>Platforms</dt>
+            <dd>TikTok, Instagram, Facebook, YouTube Shorts</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="panel editor">
+        <p class="eyebrow">Caption package</p>
+        <label for="caption">TikTok caption</label>
+        <textarea id="caption" rows="5">Quick UGC-style product clip, edited from Angela's approved video. Short, natural, and ready for TikTok.</textarea>
+
+        <label for="hashtags">Hashtags</label>
+        <input id="hashtags" type="text" value="#ugc #contentcreator #shortformvideo">
+
+        <fieldset>
+          <legend>Publish destinations</legend>
+          <label class="check-row"><input type="checkbox" checked> TikTok</label>
+          <label class="check-row"><input type="checkbox" checked> Instagram Reels</label>
+          <label class="check-row"><input type="checkbox" checked> Facebook Reels</label>
+          <label class="check-row"><input type="checkbox"> YouTube Shorts</label>
+        </fieldset>
+      </div>
+
+      <div class="panel publish">
+        <p class="eyebrow">TikTok publishing</p>
+        <ol class="step-list">
+          <li>Angela reviews the generated caption and selected video.</li>
+          <li>Angela connects her TikTok account through TikTok authorization.</li>
+          <li>The approved video and caption are sent to the connected account.</li>
+        </ol>
+
+        <div class="account-card">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>Connected account</strong>
+            <p>Angela's authorized TikTok account</p>
+          </div>
+        </div>
+
+        <button class="primary-action" type="button" id="publishButton">
+          Post to TikTok
+        </button>
+        <p class="publish-status" id="publishStatus" role="status">
+          Demo mode: ready to publish after Angela's approval.
+        </p>
+      </div>
+    </section>
+
+    <nav class="links" aria-label="Site links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </main>
+
+  <script>
+    const publishButton = document.getElementById('publishButton');
+    const publishStatus = document.getElementById('publishStatus');
+
+    publishButton.addEventListener('click', () => {
+      publishStatus.textContent = 'Demo complete: the approved TikTok post is queued for the connected account.';
+      publishButton.textContent = 'Queued for TikTok';
+      publishButton.disabled = true;
+    });
+  </script>
+</body>
+</html>
